@@ -1,0 +1,321 @@
+1. Calculate the Area of a Triangle
+
+var height = prompt("Enter Height of a Triangle: ")
+var width = prompt("Enter Width of a Triangle: ")
+var area = 0.5 * height * width
+console.log("Area of a Triangle: ",area)
+
+2. Swap two numbers
+
+var a= prompt("Enter First Number: ")
+var b= prompt("Enter First Number: ")
+console.log("Number Before Swapping: ",a ," & " ,b)
+var c=a;
+a=b;
+b=c;
+console.log("Number After Swapping: ",a ," & " ,b)
+
+3. Number is positive ,negative or zero
+
+var x = prompt("Enter the Number: ")
+if(x>0){
+    console.log("Number is Positive")
+}else if(x<0){
+    console.log("Number is negative")
+}else{
+    console.log("Number is zero")
+}
+
+4. Print Current Date
+
+var date = new Date();
+console.log(date)
+
+5. Number is even or odd
+
+var x = prompt("Enter the Number: ")
+if(x%2 == 0){
+    console.log("Number is Even")
+}else{
+    console.log("Number is odd")
+}
+
+6. Temperature Converter Celsius to Fahrenit
+
+var celsiusTemp = prompt("Enter the Temperature in Celsius: ")
+var fahrenheit = (celsiusTemp*9/5)+32;
+
+console.log(fahrenheit)
+
+7.Array Reverse
+
+var a=[1,2,3,4]
+{
+    for(var i=0;i<4;i++){
+        console.log(a[i])
+    }
+}
+console.log("Reversed Array will ")
+a.reverse()
+{
+    for(var i=0;i<4;i++){
+        console.log(a[i])
+    }
+}
+
+8. Sort the Array
+
+var a = [12, 2, 34, 0];
+
+
+for (var i = 0; i < a.length; i++) {
+    console.log(a[i]);
+}
+a.sort(function(x, y) {
+    return x - y;
+});
+console.log("Sorted Array:");
+for (var i = 0; i < a.length; i++) {
+    console.log(a[i]);
+}
+
+9.Multiplication Table
+
+var x = prompt("Enter the Number: ")
+for(var i=1;i<=10;i++)
+{
+    console.log(x*i)
+}
+
+10. Sum of first n th Natural Number
+
+var n = prompt("Enter the Number: ")
+var sum = 0
+for(var i=1;i<=n;i++){
+    sum+=i;
+}
+console.log("Sum of first n natural number is "+sum)
+
+11. Fibonocci Series
+
+function fibonacci(num) {
+    if(num ==0 || num ==1 || num ==2) {
+        return num;
+    }
+    else {
+        return fibonacci(num-1) + fibonacci(num - 2);
+    }
+}
+var nTerms = prompt('Enter the number of terms: ');
+if(nTerms <=0) {
+    console.log('Enter a positive integer.');
+}
+else {
+    for(let i = 0; i < nTerms; i++) {
+        console.log(fibonacci(i));
+    }
+}
+
+12. Number is Prime or Not
+
+const number = parseInt(prompt("Enter a positive number: "));
+var isPrime = true;
+if (number === 1) {
+    console.log("1 is neither prime nor composite number.");
+}
+else if (number > 1) {
+
+    for (let i = 2; i <= number/2; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+if (isPrime) {
+        console.log(number+ " is a prime number");
+    } else {
+        console.log(number+ " is a not prime number");
+    }
+}
+else {
+    console.log("The number is not a prime number.");
+}
+
+13. Simple Calculator
+
+
+var num1 = parseFloat(prompt("Enter Num1: "));
+var num2 = parseFloat(prompt("Enter Num2: "));
+var x = prompt("Enter 1 for Add, 2 for Sub, 3 for Multi, 4 for Divi: ");
+switch (x) {
+    case '1':
+        console.log(num1 + num2);
+        break;
+    case '2':
+        console.log(num1 - num2);
+        break;
+    case '3':
+        console.log(num1 * num2);
+        break;
+    case '4':
+        if (num2 !== 0) {
+            console.log(num1 / num2);
+        } else {
+            console.log("Division by zero is not allowed.");
+        }
+        break;
+    default:
+        console.log("Invalid choice");
+}
+
+14. Largest Number among three numbers
+
+var a = prompt("Enter Num1 ")
+var b = prompt("Enter Num2 ")
+var c = prompt("Enter Num3 ")
+
+if(a>b && a>c){
+    console.log("Num1 is largest")
+}else if(b>a && b>c){
+    console.log("Num2 is largest")
+}else{
+    console.log("Num3 is largest")
+}
+
+15. Print number in given range
+
+var num1 =prompt('Enter lower number: ');
+var num2 =prompt('Enter higher number: ');
+console.log("The prime numbers between "+num1+  " and "+ num2 +" are:");
+for (let i = num1; i <= num2; i++) {
+    console.log(num1)
+    num1++
+    }
+}
+
+16. Check last digit
+
+var a = prompt('Enter a first integer: ');
+var b = prompt('Enter a second integer: ');
+var c = prompt('Enter a third integer: ');
+var result1 = a % 10;
+var result2 = b % 10;
+var result3 = c % 10;
+
+if(result1 == result2 && result1 == result3) {
+    console.log(`Numbers have the same last digit.`);
+}
+else {
+    console.log(`Numbers have different last digit.`);
+}
+
+17. String Reverse
+
+function reverseString(str) {
+    var newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+var string = prompt('Enter a string: ');
+var result = reverseString(string);
+console.log(result);
+
+18. Decimal to Binary Conversion
+
+var number = parseInt(prompt('Enter a decimal number: '));
+const result = number.toString(2);
+console.log('Binary:' + ' ' + result);
+
+19. Count number of digits
+
+var x = parseInt(prompt("Enter a number:"), 10);
+var counter = 0;
+
+if (isNaN(x) || x < 0) {
+    console.log("Please enter a positive number.");
+} else {
+    while (x > 0) {
+        x = Math.floor(x / 10); 
+        counter++; 
+    }
+    console.log("Number of digits:"+ counter); 
+}
+
+20. Squareroot of a Number
+
+var number = prompt('Enter the number: ');
+var result = Math.sqrt(number);
+console.log(result);
+
+21. Factor of a Number
+
+var num = prompt('Enter number: ');
+console.log(`The factors of given number is:`);
+for(var i = 1; i <= num; i++) {
+    if(num % i == 0) {
+        console.log(i);
+    }
+}
+
+22. Check whether string is Palindrome or not
+
+function checkPalindrome(string) {
+    var len = string.length;
+     for (let i = 0; i < len / 2; i++) {
+         if (string[i] !== string[len - 1 - i]) {
+            return 'It is not a palindrome';
+        }
+    }
+    return 'It is a palindrome';
+}
+var string = prompt('Enter a string: ');
+var value = checkPalindrome(string);
+console.log(value);
+
+23. Count occurrence of a letter in String
+
+function countString(str, letter) {
+    var count = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str.charAt(i) == letter) {
+            count += 1;
+        }
+    }
+    return count;
+}
+var string = prompt('Enter a string: ');
+var letterToCheck = prompt('Enter a letter to check: ');
+var result = countString(string, letterToCheck);
+console.log(result);
+
+24. String Anagrams
+
+var string1 = prompt("Enter String1 ");
+var string2 = prompt("Enter String2 ");
+var result = string1.toUpperCase() === string2.toUpperCase();
+if(result) {
+    console.log('The strings are Anagrams.');
+} else {
+    console.log('The strings are not Anagrams.');
+}
+
+25. HCF
+
+var hcf;
+var number1 = prompt('Enter a first positive integer: ');
+var number2 = prompt('Enter a second positive integer: ');
+for (var i = 1; i <= number1 && i <= number2; i++) {
+    if( number1 % i == 0 && number2 % i == 0) {
+        hcf = i;
+    }
+}
+var lcm = (number1 * number2) / hcf;
+console.log(lcm);
+
+
+
+
+
+
